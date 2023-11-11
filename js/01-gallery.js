@@ -15,8 +15,8 @@ gallery.insertAdjacentHTML('beforeend', arrImg.join(""))
 gallery.addEventListener("click", event =>{
     event.preventDefault();
     if(event.target.classList.contains('gallery__image')){
-        basicLightbox.create(`<img class='img-generate-big' width="1400" height="900" src="${target.getAttribute("data-source")}" ></img>`)
+        basicLightbox.create(`<img class='img-generate-big' width="1400" height="900" src="${event.target.getAttribute("data-source")}" ></img>`).show();
     }
 })
 
-// console.log(galleryItems);
+console.log(galleryItems);
